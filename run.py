@@ -66,3 +66,47 @@ class Hotel_booking:
                 print('Invalid date. Please try again (dd/mm/yyyy):\n')
 
         return
+
+    # Function for user input of 'room type' and cost
+    def room_rent(self):
+        print('\nHotel Room Types Available')
+        print('--------------------------')
+        print('1.  Family : £100 pn')
+        print('2.  Twin Bed : £80 pps')
+        print('3.  Double : £70 pps')
+        print('4.  Single : £60 pp')
+
+        while True:
+            try:
+                x = int(input('\nEnter the Number of your required Room Type (example: 1):\n'))
+                n = int(input('\nEnter Number of nights you wish to stay with us (example: 2):\n'))
+
+                # Sum = room cost * number of nights
+                if (x == 1):
+                    print('** Your choice: FAMILY room for ' + str(n) + ' night/s.\n')
+                    self.room_type = 100 * n
+                    return True
+
+                elif (x == 2):
+                    print('** Your choice: TWIN BED room for ' + str(n) + ' night/s.\n')
+                    self.room_type = 80 * n
+                    return True
+
+                elif (x == 3):
+                    print('** Your choice: DOUBLE room for ' + str(n) + ' night/s.\n')
+                    self.room_type = 70 * n
+                    return True
+
+                elif (x == 4):
+                    print('** Your choice: SINGLE room for ' + str(n) + ' night/s.\n')
+                    self.room_type = 60 * n
+                    return True
+
+                else:
+                    raise ValueError
+
+            # Input validation error catch, and resulting message
+            except ValueError:
+                print('Invalid data. Please try again\n')
+
+        return
