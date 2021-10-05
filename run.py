@@ -7,3 +7,15 @@ print('online booking system.')
 print('Please enter your details as prompted.')
 print('You can call us on 0090-1234567')
 print('should you have any queries.\n')
+
+
+# __init__ class for hotel booking system
+class Hotel_booking:
+    def __init__(self, surname='', firstname='', check_in='', room_type=0, restaurant=0, room_total=''):
+        self.surname = surname
+        self.firstname = firstname
+        self.check_in = check_in
+        self.room_type = room_type
+        self.restaurant = restaurant
+        self.room_total = room_total
+
