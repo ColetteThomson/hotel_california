@@ -19,10 +19,20 @@ class Hotel_booking:
         self.restaurant = restaurant
         self.room_total = room_total
 
-    # Function for user input of 'surname'    
+    # Function for user input of 'surname'
     def input_surname(self):
+        while True:
+            try:
+                self.surname = input('\nEnter your Surname:\n')
+                # Validation check - user to enter alphabet letters only
+                if self.surname.isalpha():
+                    break
+                else:
+                    raise TypeError
 
-
+            # Input validation error catch, and resulting message
+            except TypeError:
+                print('Invalid data. Please re-enter using letters only.\n')
 
     # Function for user input of 'first name'
     def input_firstname(self):
