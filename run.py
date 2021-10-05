@@ -110,3 +110,42 @@ class Hotel_booking:
                 print('Invalid data. Please try again\n')
 
         return
+
+    # Restaurant meals choice: user can select more than one option
+    def meals_purchased(self):
+        print('\nMeal/s Options')
+        print('--------------')
+        print(' 1. Dinner : £40 pp\n', '2. Breakfast : £15 pp\n',
+              '3. Lunch : £30 pp\n', '4. EXIT from Restaurant Menu\n')
+        print('*Note: Multiple items may be selected individually.')
+        print("*Select '4' if don't wish to book any meals.\n")
+
+        while (1):
+            c = int(input('Enter the number of your meal choice:\n'))
+
+            # Sum = meal choice (eg: 1) * number of people (eg: 2)
+            if (c == 1):
+                d = int(input('For how many people (example: 2):\n'))
+                print('** Your choice: DINNER for ' + str(d) + '\n')
+                self.restaurant = self.restaurant + 40 * d
+
+            elif (c == 2):
+                d = int(input('For how many people (example: 2):\n'))
+                print('** Your choice: BREAKFAST for ' + str(d) + '\n')
+                self.restaurant = self.restaurant + 15 * d
+
+            elif (c == 3):
+                d = int(input('For how many people (example: 2):\n'))
+                print('** Your choice: LUNCH for ' + str(d) + '\n')
+                self.restaurant = self.restaurant + 30 * d
+
+            # User can bypass the restaurant option by pressing '4'
+            # User to press '4' after making meal choices
+            elif (c == 4):
+                print('Exiting the restaurant menu...')
+                return
+            # Input validation error catch, and resulting message
+            else:
+                print('Invalid entry. Please try again.\n')
+
+        return
