@@ -19,3 +19,16 @@ class Hotel_booking:
         self.restaurant = restaurant
         self.room_total = room_total
 
+    # Function for user input of 'surname'    
+    def input_surname(self):
+
+
+
+    # Function for user input of 'first name'
+    def input_firstname(self):
+
+
+
+    # Function for user input of 'check_in date'
+    def check_in_date(self):
+
