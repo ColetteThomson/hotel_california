@@ -36,8 +36,20 @@ class Hotel_booking:
 
     # Function for user input of 'first name'
     def input_firstname(self):
+        while True:
+            try:
+                self.firstname = input('\nEnter your First Name:\n')
+                # Validation check - user to enter alphabet letters only
+                if self.firstname.isalpha():
+                    # Greeting message to user
+                    print('\n** Hello ' + self.firstname + ' ' + self.surname + '! **')
+                    break
+                else:
+                    raise TypeError
 
-
+            # Input validation error catch, and resulting message
+            except TypeError:
+                print('Invalid data. Please re-enter using letters only.\n')
 
     # Function for user input of 'check_in date'
     def check_in_date(self):
