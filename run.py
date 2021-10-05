@@ -53,4 +53,16 @@ class Hotel_booking:
 
     # Function for user input of 'check_in date'
     def check_in_date(self):
+        while True:
+            try:
+                self.check_in = input('\nEnter your Check In Date (dd/mm/yyyy):\n')
+                # Validation check for date format and future date
+                if datetime.strptime(self.check_in, '%d/%m/%Y').date() < datetime.now().date():
+                    raise ValueError
+                return True
 
+            # Input validation error catch, and resulting message
+            except ValueError:
+                print('Invalid date. Please try again (dd/mm/yyyy):\n')
+
+        return
