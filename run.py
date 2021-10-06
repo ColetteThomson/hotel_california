@@ -111,7 +111,7 @@ class Hotel_booking:
                 else:
                     raise ValueError
 
-            # Input validation error catch for 'x' and 'n', and resulting message
+            # Input validation error catch for 'x' and 'n' variables
             except ValueError:
                 print('Invalid data. Please try again\n')
 
@@ -156,7 +156,7 @@ class Hotel_booking:
                 else:
                     raise ValueError
 
-            # Input validation error catch for 'c' and 'd', and resulting message
+            # Input validation error catch for 'c' and 'd' variables
             except ValueError:
                 print('Invalid entry. Please try again.\n')
 
