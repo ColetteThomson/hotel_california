@@ -85,47 +85,47 @@ class Hotel_booking:
 
         while True:
             try:
-                x = int(input('\nEnter the Number of your required Room Type \
+                room = int(input('\nEnter the Number of your required Room Type \
 (example: 1):\n'))
 
                 # If statements appropriate to above room type choice
-                if (x == 1):
-                    n = int(input('\nEnter Number of nights you wish to stay \
+                if (room == 1):
+                    night = int(input('\nEnter Number of nights you wish to stay \
 with us (example: 2):\n'))
                     print('** Your choice: FAMILY room for '
-                          + str(n) + ' night/s.\n')
-                    # Sum = room cost (eg: '1') * number of nights (eg: '2')
-                    self.room_type = 100 * n
+                          + str(night) + ' night/s.\n')
+                    # Sum of room cost (eg: '1') * number of nights (eg: '2')
+                    self.room_type = 100 * night
                     return True
 
-                elif (x == 2):
-                    n = int(input('\nEnter Number of nights you wish to stay \
+                elif (room == 2):
+                    night = int(input('\nEnter Number of nights you wish to stay \
 with us (example: 2):\n'))
                     print('** Your choice: TWIN BED room for '
-                          + str(n) + ' night/s.\n')
-                    self.room_type = 80 * n
+                          + str(night) + ' night/s.\n')
+                    self.room_type = 80 * night
                     return True
 
-                elif (x == 3):
-                    n = int(input('\nEnter Number of nights you wish to stay \
+                elif (room == 3):
+                    night = int(input('\nEnter Number of nights you wish to stay \
 with us (example: 2):\n'))
                     print('** Your choice: DOUBLE room for '
-                          + str(n) + ' night/s.\n')
-                    self.room_type = 70 * n
+                          + str(night) + ' night/s.\n')
+                    self.room_type = 70 * night
                     return True
 
-                elif (x == 4):
-                    n = int(input('\nEnter Number of nights you wish to stay \
+                elif (room == 4):
+                    night = int(input('\nEnter Number of nights you wish to stay \
 with us (example: 2):\n'))
                     print('** Your choice: SINGLE room for '
-                          + str(n) + ' night/s.\n')
-                    self.room_type = 60 * n
+                          + str(night) + ' night/s.\n')
+                    self.room_type = 60 * night
                     return True
 
                 else:
                     raise ValueError
 
-            # Input validation error catch for 'x' and 'n' variables
+            # Input validation error catch for 'room' and 'night' variables
             except ValueError:
                 print('Invalid data. Please try again\n')
 
@@ -157,7 +157,7 @@ meal choice (example 1):\n'))
 
                     people = int(input('For how many people (example: 2):\n'))
                     print('* Your choice: DINNER for ' + str(people) + '\n')
-                    # Sum = meal choice (eg: 1) * number of people (eg: 2)
+                    # Sum of meal choice (eg: 1) * number of people (eg: 2)
                     self.restaurant = self.restaurant + 40 * people
                     meal_choices.append(choice)
 
@@ -213,7 +213,7 @@ meal choice (example 1):\n'))
         print('Your Check-in Date:', self.check_in)
         print('Your Room Cost: £', self.room_type)
         print('Your Meal/s Cost: £', self.restaurant)
-        print('Meals chosen:', self.meals_purchased.meals_choice)
+        
         # Final bill sum = 'room type' + 'restaurant' choice/s
         self.room_total = self.room_type + self.restaurant
         print('Your Total Final Bill (inc VAT): £', self.room_total, '\n')
