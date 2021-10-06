@@ -4,7 +4,7 @@ from datetime import datetime
 print('\n*** WELCOME TO THE HOTEL CALIFORNIA ***')
 print('\nYou have reached our quick and easy')
 print('online booking system.')
-print('Please enter your details as prompted.')
+print('Please carefully enter your details as prompted.')
 print('You can call us on 0090-1234567')
 print('should you have any queries.\n')
 
@@ -128,7 +128,7 @@ class Hotel_booking:
 
         while (1):
             try:
-                c = int(input('Enter the number of your meal choice:\n'))
+                c = int(input('Enter the number of your meal choice (example 1):\n'))
 
                 # If statements appropriate to above meal choice
                 if (c == 1):
