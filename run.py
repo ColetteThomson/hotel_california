@@ -11,7 +11,8 @@ print('should you have any queries.\n')
 
 # __init__ class for hotel booking system
 class Hotel_booking:
-    def __init__(self, surname='', firstname='', check_in='', room_type=0, restaurant=0, room_total=''):
+    def __init__(self, surname='', firstname='', check_in='', room_type=0,
+                 restaurant=0, room_total=''):
         self.surname = surname
         self.firstname = firstname
         self.check_in = check_in
@@ -43,11 +44,12 @@ class Hotel_booking:
                 # Validation check - user to enter alphabet letters only
                 if self.firstname.isalpha():
                     # Greeting message to user
-                    print('\n** Hello ' + self.firstname + ' ' + self.surname + '! **')
+                    print('\n** Hello ' + self.firstname + ' ' + self.surname +
+                          '! **')
                     break
                 else:
                     raise TypeError
-            
+
             # Input validation error catch, and resulting message
             except TypeError:
                 print('Invalid data. Please re-enter using letters only.\n')
@@ -57,9 +59,12 @@ class Hotel_booking:
     def check_in_date(self):
         while True:
             try:
-                self.check_in = input('\nEnter your Check In Date (dd/mm/yyyy):\n')
+                self.check_in = input(
+                    '\nEnter your Check In Date (dd/mm/yyyy):\n')
                 # Validation check for date format and future date
-                if datetime.strptime(self.check_in, '%d/%m/%Y').date() < datetime.now().date():
+                if datetime.strptime(
+                        self.check_in, '%d/%m/%Y').date() < datetime.now(). \
+                        date():
                     raise ValueError
                 return True
 
@@ -80,31 +85,40 @@ class Hotel_booking:
 
         while True:
             try:
-                x = int(input('\nEnter the Number of your required Room Type (example: 1):\n'))
+                x = int(input('\nEnter the Number of your required Room Type \
+(example: 1):\n'))
 
                 # If statements appropriate to above room type choice
                 if (x == 1):
-                    n = int(input('\nEnter Number of nights you wish to stay with us (example: 2):\n'))
-                    print('** Your choice: FAMILY room for ' + str(n) + ' night/s.\n')
+                    n = int(input('\nEnter Number of nights you wish to stay \
+with us (example: 2):\n'))
+                    print('** Your choice: FAMILY room for '
+                          + str(n) + ' night/s.\n')
                     # Sum = room cost (eg: '1') * number of nights (eg: '2')
                     self.room_type = 100 * n
                     return True
 
                 elif (x == 2):
-                    n = int(input('\nEnter Number of nights you wish to stay with us (example: 2):\n'))
-                    print('** Your choice: TWIN BED room for ' + str(n) + ' night/s.\n')
+                    n = int(input('\nEnter Number of nights you wish to stay \
+with us (example: 2):\n'))
+                    print('** Your choice: TWIN BED room for '
+                          + str(n) + ' night/s.\n')
                     self.room_type = 80 * n
                     return True
 
                 elif (x == 3):
-                    n = int(input('\nEnter Number of nights you wish to stay with us (example: 2):\n'))
-                    print('** Your choice: DOUBLE room for ' + str(n) + ' night/s.\n')
+                    n = int(input('\nEnter Number of nights you wish to stay \
+with us (example: 2):\n'))
+                    print('** Your choice: DOUBLE room for '
+                          + str(n) + ' night/s.\n')
                     self.room_type = 70 * n
                     return True
 
                 elif (x == 4):
-                    n = int(input('\nEnter Number of nights you wish to stay with us (example: 2):\n'))
-                    print('** Your choice: SINGLE room for ' + str(n) + ' night/s.\n')
+                    n = int(input('\nEnter Number of nights you wish to stay \
+with us (example: 2):\n'))
+                    print('** Your choice: SINGLE room for '
+                          + str(n) + ' night/s.\n')
                     self.room_type = 60 * n
                     return True
 
@@ -126,37 +140,57 @@ class Hotel_booking:
         print('*Note: Multiple items may be selected individually.')
         print("*Select '4' if don't wish to book any meals.\n")
 
+        # Array storing 'choice' variable results
+        meal_choices = []
+
         while (1):
             try:
-                c = int(input('Enter the number of your meal choice (example 1):\n'))
+                choice = int(input('Enter the number of your \
+meal choice (example 1):\n'))
 
                 # If statements appropriate to above meal choice
-                if (c == 1):
-                    d = int(input('For how many people (example: 2):\n'))
-                    print('** Your choice: DINNER for ' + str(d) + '\n')
+                if (choice == 1):
+                    # To check meal choice not already selected
+                    if choice in meal_choices:
+                        print('You have already selected Dinner!\n')
+                        continue
+
+                    meal_choices.append(choice)
+                    people = int(input('For how many people (example: 2):\n'))
+                    print('* Your choice: DINNER for ' + str(people) + '\n')
                     # Sum = meal choice (eg: 1) * number of people (eg: 2)
-                    self.restaurant = self.restaurant + 40 * d
+                    self.restaurant = self.restaurant + 40 * people
 
-                elif (c == 2):
-                    d = int(input('For how many people (example: 2):\n'))
-                    print('** Your choice: BREAKFAST for ' + str(d) + '\n')
-                    self.restaurant = self.restaurant + 15 * d
+                elif (choice == 2):
+                    if choice in meal_choices:
+                        print('You have already selected Breakfast!\n')
+                        continue
 
-                elif (c == 3):
-                    d = int(input('For how many people (example: 2):\n'))
-                    print('** Your choice: LUNCH for ' + str(d) + '\n')
-                    self.restaurant = self.restaurant + 30 * d
+                    meal_choices.append(choice)
+                    people = int(input('For how many people (example: 2):\n'))
+                    print('* Your choice: BREAKFAST for ' + str(people) + '\n')
+                    self.restaurant = self.restaurant + 15 * people
+
+                elif (choice == 3):
+                    if choice in meal_choices:
+                        print('You have already selected Lunch!\n')
+                        continue
+
+                    meal_choices.append(choice)
+                    people = int(input('For how many people (example: 2):\n'))
+                    print('* Your choice: LUNCH for ' + str(people) + '\n')
+                    self.restaurant = self.restaurant + 30 * people
 
                 # User can bypass the restaurant option by pressing '4'
-                # User to press '4' after making meal choices
-                elif (c == 4):
+                # User must press '4' after making meal choices
+                elif (choice == 4):
                     print('Exiting the restaurant menu...')
                     return
 
                 else:
                     raise ValueError
 
-            # Input validation error catch for 'c' and 'd' variables
+            # Input validation error catch for 'choice' and 'people' variables
             except ValueError:
                 print('Invalid entry. Please try again.\n')
 
@@ -191,8 +225,9 @@ class Hotel_booking:
         print('Payment can be made on day of arrival.')
         print('**** We hope you enjoy your stay! ****\n')
 
+
 """
-Function that provides user prompts to, and calls the following functions:
+main() function that provides 'user prompts' to call the functions:
 -- input_firstname
 -- input_surname
 -- check_in_date
@@ -206,16 +241,25 @@ Function that provides user prompts to, and calls the following functions:
 def main():
     a = Hotel_booking()
 
-    actions = ['\nPress 1 to enter your Surname\n', '\nPress 2 to enter your First Name\n', '\nPress 3 to choose your Arrival Date\n', '\nPress 4 to choose your Room Type\n', '\nPress 5 to select your Meal/s\n', '\nPress 6 to view your Final Bill\n', '\nPress 7 to view your Confirmation\n']
-    functions = [a.input_surname, a.input_firstname, a.check_in_date, a.room_rent, a.meals_purchased, a.show_final_bill, a.exit_message]
- 
+    actions = ['\nPress 1 to enter your Surname\n',
+               '\nPress 2 to enter your First Name\n',
+               '\nPress 3 to choose your Arrival Date\n',
+               '\nPress 4 to choose your Room Type\n',
+               '\nPress 5 to select your Meal/s\n',
+               '\nPress 6 to view your Final Bill\n',
+               '\nPress 7 to view your Confirmation\n']
+
+    functions = [a.input_surname, a.input_firstname,
+                 a.check_in_date, a.room_rent,
+                 a.meals_purchased, a.show_final_bill, a.exit_message]
+
     # Iterate over actions
     for index, value in enumerate(actions):
- 
+
         # Stay with action until user inputs value
         while True:
             user_input = input(value)
- 
+
             if user_input.isdigit() and int(user_input) == index + 1:
                 # Input validation passed, then calls relevant function
                 functions[index]()
