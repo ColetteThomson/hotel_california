@@ -149,3 +149,25 @@ class Hotel_booking:
                 print('Invalid entry. Please try again.\n')
 
         return
+
+    """
+    Function showing return values from:
+    -- input_firstname
+    -- input_surname
+    -- check_in_date
+    -- room_rent
+    -- meals_purchased
+    """
+    def show_final_bill(self):
+        print('\nHOTEL CALIFORNIA BILL')
+        print('---------------------')
+        print("Customer's Details")
+        # Reservation = combination of user firstname and surname
+        print('Your Reservation:', self.firstname, self.surname)
+        print('Your Check-in Date:', self.check_in)
+        print('Your Room Cost: £', self.room_type)
+        print('Your Meal/s Cost: £', self.restaurant)
+        # Final bill sum = 'room type' + 'restaurant' choice/s
+        self.room_total = self.room_type + self.restaurant
+        print('Your Total Final Bill (inc VAT): £', self.room_total, '\n')
+
