@@ -81,25 +81,29 @@ class Hotel_booking:
         while True:
             try:
                 x = int(input('\nEnter the Number of your required Room Type (example: 1):\n'))
-                n = int(input('\nEnter Number of nights you wish to stay with us (example: 2):\n'))
 
-                # Sum = room cost * number of nights
+                # If statements appropriate to above room type choice
                 if (x == 1):
+                    n = int(input('\nEnter Number of nights you wish to stay with us (example: 2):\n'))
                     print('** Your choice: FAMILY room for ' + str(n) + ' night/s.\n')
+                    # Sum = room cost (eg: '1') * number of nights (eg: '2')
                     self.room_type = 100 * n
                     return True
 
                 elif (x == 2):
+                    n = int(input('\nEnter Number of nights you wish to stay with us (example: 2):\n'))
                     print('** Your choice: TWIN BED room for ' + str(n) + ' night/s.\n')
                     self.room_type = 80 * n
                     return True
 
                 elif (x == 3):
+                    n = int(input('\nEnter Number of nights you wish to stay with us (example: 2):\n'))
                     print('** Your choice: DOUBLE room for ' + str(n) + ' night/s.\n')
                     self.room_type = 70 * n
                     return True
 
                 elif (x == 4):
+                    n = int(input('\nEnter Number of nights you wish to stay with us (example: 2):\n'))
                     print('** Your choice: SINGLE room for ' + str(n) + ' night/s.\n')
                     self.room_type = 60 * n
                     return True
@@ -107,7 +111,7 @@ class Hotel_booking:
                 else:
                     raise ValueError
 
-            # Input validation error catch, and resulting message
+            # Input validation error catch for 'x' and 'n', and resulting message
             except ValueError:
                 print('Invalid data. Please try again\n')
 
@@ -126,10 +130,11 @@ class Hotel_booking:
             try:
                 c = int(input('Enter the number of your meal choice:\n'))
 
-                # Sum = meal choice (eg: 1) * number of people (eg: 2)
+                # If statements appropriate to above meal choice
                 if (c == 1):
                     d = int(input('For how many people (example: 2):\n'))
                     print('** Your choice: DINNER for ' + str(d) + '\n')
+                    # Sum = meal choice (eg: 1) * number of people (eg: 2)
                     self.restaurant = self.restaurant + 40 * d
 
                 elif (c == 2):
@@ -147,10 +152,11 @@ class Hotel_booking:
                 elif (c == 4):
                     print('Exiting the restaurant menu...')
                     return
-                # Input validation error catch, and resulting message
+
                 else:
                     raise ValueError
 
+            # Input validation error catch for 'c' and 'd', and resulting message
             except ValueError:
                 print('Invalid entry. Please try again.\n')
 
