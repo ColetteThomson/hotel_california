@@ -33,6 +33,7 @@ class Hotel_booking:
             # Input validation error catch, and resulting message
             except TypeError:
                 print('Invalid data. Please re-enter using letters only.\n')
+        return
 
     # Function for user input of 'first name'
     def input_firstname(self):
@@ -46,10 +47,11 @@ class Hotel_booking:
                     break
                 else:
                     raise TypeError
-
+            
             # Input validation error catch, and resulting message
             except TypeError:
                 print('Invalid data. Please re-enter using letters only.\n')
+        return
 
     # Function for user input of 'check_in date'
     def check_in_date(self):
@@ -121,31 +123,35 @@ class Hotel_booking:
         print("*Select '4' if don't wish to book any meals.\n")
 
         while (1):
-            c = int(input('Enter the number of your meal choice:\n'))
+            try:
+                c = int(input('Enter the number of your meal choice:\n'))
 
-            # Sum = meal choice (eg: 1) * number of people (eg: 2)
-            if (c == 1):
-                d = int(input('For how many people (example: 2):\n'))
-                print('** Your choice: DINNER for ' + str(d) + '\n')
-                self.restaurant = self.restaurant + 40 * d
+                # Sum = meal choice (eg: 1) * number of people (eg: 2)
+                if (c == 1):
+                    d = int(input('For how many people (example: 2):\n'))
+                    print('** Your choice: DINNER for ' + str(d) + '\n')
+                    self.restaurant = self.restaurant + 40 * d
 
-            elif (c == 2):
-                d = int(input('For how many people (example: 2):\n'))
-                print('** Your choice: BREAKFAST for ' + str(d) + '\n')
-                self.restaurant = self.restaurant + 15 * d
+                elif (c == 2):
+                    d = int(input('For how many people (example: 2):\n'))
+                    print('** Your choice: BREAKFAST for ' + str(d) + '\n')
+                    self.restaurant = self.restaurant + 15 * d
 
-            elif (c == 3):
-                d = int(input('For how many people (example: 2):\n'))
-                print('** Your choice: LUNCH for ' + str(d) + '\n')
-                self.restaurant = self.restaurant + 30 * d
+                elif (c == 3):
+                    d = int(input('For how many people (example: 2):\n'))
+                    print('** Your choice: LUNCH for ' + str(d) + '\n')
+                    self.restaurant = self.restaurant + 30 * d
 
-            # User can bypass the restaurant option by pressing '4'
-            # User to press '4' after making meal choices
-            elif (c == 4):
-                print('Exiting the restaurant menu...')
-                return
-            # Input validation error catch, and resulting message
-            else:
+                # User can bypass the restaurant option by pressing '4'
+                # User to press '4' after making meal choices
+                elif (c == 4):
+                    print('Exiting the restaurant menu...')
+                    return
+                # Input validation error catch, and resulting message
+                else:
+                    raise ValueError
+
+            except ValueError:
                 print('Invalid entry. Please try again.\n')
 
         return
