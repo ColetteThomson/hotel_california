@@ -179,4 +179,42 @@ class Hotel_booking:
         print('Payment can be made on day of arrival.')
         print('**** We hope you enjoy your stay! ****\n')
 
+"""
+Function that provides user prompts to, and calls the following functions:
+-- input_firstname
+-- input_surname
+-- check_in_date
+-- room_rent
+-- meals_purchased
+-- show_final_bill
+-- exit_message
+"""
 
+
+def main():
+    a = Hotel_booking()
+
+    actions = ['\nPress 1 to enter your Surname\n', '\nPress 2 to enter your First Name\n', '\nPress 3 to choose your Arrival Date\n', '\nPress 4 to choose your Room Type\n', '\nPress 5 to select your Meal/s\n', '\nPress 6 to view your Final Bill\n', '\nPress 7 to view your Confirmation\n']
+    functions = [a.input_surname, a.input_firstname, a.check_in_date, a.room_rent, a.meals_purchased, a.show_final_bill, a.exit_message]
+ 
+    # Iterate over actions
+    for index, value in enumerate(actions):
+ 
+        # Stay with action until user inputs value
+        while True:
+            user_input = input(value)
+ 
+            if user_input.isdigit() and int(user_input) == index + 1:
+                # Input validation passed, then calls relevant function
+                functions[index]()
+                break
+            else:
+                # Input validation check - user to enter a number
+                continue
+
+
+"""
+Calling of the main() function which in turn
+calls the Class 'Hotel_booking'
+"""
+main()
