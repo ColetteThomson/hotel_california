@@ -171,3 +171,12 @@ class Hotel_booking:
         self.room_total = self.room_type + self.restaurant
         print('Your Total Final Bill (inc VAT): £', self.room_total, '\n')
 
+    # Function displaying exit message confirming user's booking
+    def exit_message(self):
+        print('\nThank you - your booking is now confirmed!')
+        print('NB: Should you wish to make any changes to')
+        print('your booking - please call us on 0090-1234567.')
+        print('Payment can be made on day of arrival.')
+        print('**** We hope you enjoy your stay! ****\n')
+
+
