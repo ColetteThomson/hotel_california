@@ -152,34 +152,34 @@ meal choice (example 1):\n'))
                 if (choice == 1):
                     # To check meal choice not already selected
                     if choice in meal_choices:
-                        print('You have already selected Dinner!\n')
+                        print("You've already selected Dinner!\n")
                         continue
 
-                    meal_choices.append(choice)
                     people = int(input('For how many people (example: 2):\n'))
                     print('* Your choice: DINNER for ' + str(people) + '\n')
                     # Sum = meal choice (eg: 1) * number of people (eg: 2)
                     self.restaurant = self.restaurant + 40 * people
+                    meal_choices.append(choice)
 
                 elif (choice == 2):
                     if choice in meal_choices:
-                        print('You have already selected Breakfast!\n')
+                        print("You've already selected Breakfast!\n")
                         continue
 
-                    meal_choices.append(choice)
                     people = int(input('For how many people (example: 2):\n'))
                     print('* Your choice: BREAKFAST for ' + str(people) + '\n')
                     self.restaurant = self.restaurant + 15 * people
+                    meal_choices.append(choice)
 
                 elif (choice == 3):
                     if choice in meal_choices:
-                        print('You have already selected Lunch!\n')
+                        print("You've already selected Lunch!\n")
                         continue
 
-                    meal_choices.append(choice)
                     people = int(input('For how many people (example: 2):\n'))
                     print('* Your choice: LUNCH for ' + str(people) + '\n')
                     self.restaurant = self.restaurant + 30 * people
+                    meal_choices.append(choice)
 
                 # User can bypass the restaurant option by pressing '4'
                 # User must press '4' after making meal choices
@@ -213,6 +213,7 @@ meal choice (example 1):\n'))
         print('Your Check-in Date:', self.check_in)
         print('Your Room Cost: £', self.room_type)
         print('Your Meal/s Cost: £', self.restaurant)
+        print('Meals chosen:', self.meals_purchased.meals_choice)
         # Final bill sum = 'room type' + 'restaurant' choice/s
         self.room_total = self.room_type + self.restaurant
         print('Your Total Final Bill (inc VAT): £', self.room_total, '\n')
