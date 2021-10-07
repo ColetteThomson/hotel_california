@@ -66,23 +66,26 @@ This enables users to choose meals OR bypass the meal options.
 
 ## Testing
 Manual testing of this project included:
+* Testing in my local terminal and the CI Heroku terminal.
 * A run through of the entire system with correct user input to ensure all functionality was working as expected.
+
 Validation testing for entry of invalid input:
 * strings instead of numbers
 * numbers instead of strings
 * combinations of alphabet, special characters and numbers where alphabet letters were expected.
 * Invalid date formats and dates that were in the past.
 * Attempting to 'ignore' steps in the booking process
+* Repetition testing for same input twice (in meal options section)
 * Repeated invalid input 
+
+### Validator Testing
+* Python code was run through [PEP8online.com](http://pep8online.com/) with no errors returned.
 
 ### Solved Bugs
 * The function 'input_surname' occasionally doesn't accept correct input. This irregular bug appears to have been resolved through the adding of a 'return'.  This ensures a return to the Main calling function.
 
 ### Unsolved Bugs
 * None found
-
-### Validator Testing
-* Python code was run through [PEP8online.com](http://pep8online.com/) with no errors returned.
 
 ### Project Creation
 The following terminal commands were used during this project:
