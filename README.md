@@ -81,4 +81,29 @@ Validation testing for entry of invalid input:
 ### Validator Testing
 * Python code was run through [PEP8online.com](http://pep8online.com/) with no errors returned.
 
+### Project Creation
+The following terminal commands were used during this project:
+* git add . - this command adds a change in the working directory to the staging area.
+* git commit -m "*message*" - this command details the change/s made in the 'message' section and then commits the changes to the local repository.
+* git push - this command is used to push all changes to the GitHub repository.
+
+## Deployment
+This project was deployed using Code Institute's mock terminal for Heroku.
+Steps for deployment:
+* Fork or clone this repository
+* Create a new Heroku app
+* Set the buildbacks to Python and NodeJS in that order
+* Link the Heroku app to the repository
+* Click on Deploy
+
+## Technologies
+* Python - for all code
+* Python library import: datetime
+* Code Institute's Heroku terminal
+* [Git](https://git-scm.com/) - used as version control software to commit and push code to a GitHub repository where all source code is located.
+
+## Credits
+* Code Institute for the deployment terminal
+* The private collaboration and knowledge sharing SaaS platform [Stack Overflow](https://stackoverflow.com/) was an invaluable resource for general coding queries.
+* Code Institute tutor support
 
