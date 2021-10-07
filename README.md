@@ -82,7 +82,7 @@ Validation testing for entry of invalid input:
 * Python code was run through [PEP8online.com](http://pep8online.com/) with no errors returned.
 
 ### Solved Bugs
-* The function 'input_surname' occasionally doesn't accept correct input. This irregular bug appears to have been resolved through the adding of a 'return'.  This ensures a return to the Main calling function.
+* The function 'input_surname' occasionally doesn't accept correct input. This bug appears to have been resolved through the adding of a 'return'.  This ensures a return to the main() calling function.
 
 ### Unsolved Bugs
 * None found
