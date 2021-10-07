@@ -97,8 +97,8 @@ class Hotel_booking:
                 if (room == 1):
                     night = int(input('\nEnter Number of nights you wish to stay \
 with us (example: 2):\n'))
-                    print('** Your choice: FAMILY room for '
-                          + str(night) + ' night/s.\n')
+                    print('** Your choice: FAMILY room for ' +
+                          str(night) + ' night/s.\n')
                     # Sum of room cost (eg: '1') * number of nights (eg: '2')
                     self.room_type = 100 * night
                     return True
@@ -106,24 +106,24 @@ with us (example: 2):\n'))
                 elif (room == 2):
                     night = int(input('\nEnter Number of nights you wish to stay \
 with us (example: 2):\n'))
-                    print('** Your choice: TWIN BED room for '
-                          + str(night) + ' night/s.\n')
+                    print('** Your choice: TWIN BED room for ' +
+                          str(night) + ' night/s.\n')
                     self.room_type = 80 * night
                     return True
 
                 elif (room == 3):
                     night = int(input('\nEnter Number of nights you wish to stay \
 with us (example: 2):\n'))
-                    print('** Your choice: DOUBLE room for '
-                          + str(night) + ' night/s.\n')
+                    print('** Your choice: DOUBLE room for ' +
+                          str(night) + ' night/s.\n')
                     self.room_type = 70 * night
                     return True
 
                 elif (room == 4):
                     night = int(input('\nEnter Number of nights you wish to stay \
 with us (example: 2):\n'))
-                    print('** Your choice: SINGLE room for '
-                          + str(night) + ' night/s.\n')
+                    print('** Your choice: SINGLE room for ' +
+                          str(night) + ' night/s.\n')
                     self.room_type = 60 * night
                     return True
 
