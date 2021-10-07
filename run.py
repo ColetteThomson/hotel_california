@@ -9,7 +9,7 @@ print('You can call us on 0090-1234567')
 print('should you have any queries.\n')
 
 
-# __init__ class for hotel booking system
+# __init__ method for the class Hotel_booking system
 class Hotel_booking:
     def __init__(self, surname='', firstname='', check_in='', room_type=0,
                  restaurant=0, room_total=''):

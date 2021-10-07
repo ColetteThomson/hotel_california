@@ -60,6 +60,9 @@ This enables users to choose meals OR bypass the meal options.
 * Future functionality to allow users to edit their bookings if required.
 
 ## Data Model
+* Object Oriented Programming (OOP): the __init__ method will run as soon as an object of the class Hotel_booking is instantiated.
+* The Hotel_booking class stores the following:  surname; firstname; check-in date; hotel room type and number of nights; restaurant meals chosen and number of people; final hotel bill; exit or confirmation message. 
+* Outside of the Hotel_booking class is the main() function that is used to provide user prompts to each of the above class methods - and to 'call' the class of Hotel_booking.
 
 ## Testing
 Manual testing of this project included:
