@@ -9,8 +9,13 @@ print('You can call us on 0090-1234567')
 print('should you have any queries.\n')
 
 
-# __init__ method for the class Hotel_booking system
 class Hotel_booking:
+    """
+    _init__ method for the class Hotel_booking system:
+    sets user names; check in date; room type options;
+    meal options; final bill; and confirmation message
+    """
+
     def __init__(self, surname='', firstname='', check_in='', room_type=0,
                  restaurant=0, room_total=''):
         self.surname = surname
@@ -61,7 +66,7 @@ class Hotel_booking:
             try:
                 self.check_in = input(
                     '\nEnter your Check In Date (dd/mm/yyyy):\n')
-                # Validation check for date format and future date
+                # Validation checks for date format and future date
                 if datetime.strptime(
                         self.check_in, '%d/%m/%Y').date() < datetime.now(). \
                         date():
@@ -213,7 +218,7 @@ meal choice (example 1):\n'))
         print('Your Check-in Date:', self.check_in)
         print('Your Room Cost: £', self.room_type)
         print('Your Meal/s Cost: £', self.restaurant)
-        
+
         # Final bill sum = 'room type' + 'restaurant' choice/s
         self.room_total = self.room_type + self.restaurant
         print('Your Total Final Bill (inc VAT): £', self.room_total, '\n')
@@ -254,10 +259,10 @@ def main():
                  a.check_in_date, a.room_rent,
                  a.meals_purchased, a.show_final_bill, a.exit_message]
 
-    # Iterate over actions
+    # Iterate over 'actions'
     for index, value in enumerate(actions):
 
-        # Stay with action until user inputs value
+        # Stay with 'action' until user inputs correct value
         while True:
             user_input = input(value)
 
