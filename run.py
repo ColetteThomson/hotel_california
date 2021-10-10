@@ -41,7 +41,7 @@ class Hotel_booking:
 
             # Input validation error catch, and resulting message
             except TypeError:
-                print('Invalid data. Please re-enter using letters only.\n')
+                print('Invalid entry. Please re-enter using letters only.\n')
         return
 
     # Function for user input of 'first name'
@@ -60,7 +60,7 @@ class Hotel_booking:
 
             # Input validation error catch, and resulting message
             except TypeError:
-                print('Invalid data. Please re-enter using letters only.\n')
+                print('Invalid entry. Please re-enter using letters only.\n')
         return
 
     # Function for user input of 'check_in date'
@@ -135,7 +135,7 @@ with us (example: 2):\n'))
 
             # Input validation error catch for 'room' and 'night' variables
             except ValueError:
-                print('Invalid data. Please try again\n')
+                print('Invalid entry. Please try again\n')
 
         return
 
@@ -154,8 +154,8 @@ with us (example: 2):\n'))
 
         while (1):
             try:
-                choice = int(input('Enter the number of your \
-meal choice (example 1):\n'))
+                choice = int(input('Enter the Number of your \
+Meal Choice (example 1):\n'))
 
                 # If statements appropriate to above meal choice
                 if (choice == 1):
