@@ -3,7 +3,10 @@ from datetime import datetime
 # Hotel welcome and information message
 print('\n*** WELCOME TO THE HOTEL CALIFORNIA ***')
 print('\nYou have reached our quick and easy')
-print('online booking system.')
+print('online booking system. How it works:')
+print("We'll start with your personal details,")
+print('then choose a room type, make meal choices')
+print('and finally display your Total Bill.')
 print('Please carefully enter your details as prompted.')
 print('You can call us on 0090-1234567')
 print('should you have any queries.\n')
@@ -142,8 +145,9 @@ with us (example: 2):\n'))
         print('--------------')
         print(' 1. Dinner : £40 pp\n', '2. Breakfast : £15 pp\n',
               '3. Lunch : £30 pp\n', '4. EXIT from Restaurant Menu\n')
-        print('*Note: Multiple items may be selected individually.')
-        print("*Select '4' if don't wish to book any meals.\n")
+        print('*Note: Multiple items may be selected one at a time, and')
+        print(" remember to select '4' after you've made all your choices.")
+        print("*If you don't wish to book any meals, select '4' now.\n")
 
         # Array storing 'choice' variable results
         meal_choices = []
@@ -229,7 +233,7 @@ meal choice (example 1):\n'))
         print('NB: Should you wish to make any changes to')
         print('your booking - please call us on 0090-1234567.')
         print('Payment can be made on day of arrival.')
-        print('**** We hope you enjoy your stay! ****\n')
+        print('** We hope you enjoy your stay at the Hotel California! **\n')
 
 
 """
