@@ -1,15 +1,15 @@
 from datetime import datetime
 
 # Hotel welcome and information message
-print('\n*** WELCOME TO THE HOTEL CALIFORNIA ***')
-print('\nYou have reached our quick and easy')
+print('\n*** WELCOME TO THE HOTEL CALIFORNIA! ***')
+print("\nYou've reached our quick and easy")
 print('online booking system. How it works:')
 print("We'll start with your personal details,")
 print('then choose a room type, make meal choices')
 print('and finally display your Total Bill.')
-print('Please carefully enter your details as prompted.')
-print('You can call us on 0090-1234567')
+print('Note: You can call us anytime on 0090-1234567')
 print('should you have any queries.\n')
+print('Please carefully enter your details as prompted.')
 
 
 class Hotel_booking:
@@ -165,7 +165,7 @@ meal choice (example 1):\n'))
                         continue
 
                     people = int(input('For how many people (example: 2):\n'))
-                    print('* Your choice: DINNER for ' + str(people) + '\n')
+                    print('** Your choice: DINNER for ' + str(people) + '\n')
                     # Sum of meal choice (eg: 1) * number of people (eg: 2)
                     self.restaurant = self.restaurant + 40 * people
                     meal_choices.append(choice)
@@ -176,7 +176,8 @@ meal choice (example 1):\n'))
                         continue
 
                     people = int(input('For how many people (example: 2):\n'))
-                    print('* Your choice: BREAKFAST for ' + str(people) + '\n')
+                    print('** Your choice: BREAKFAST for ' + str(people) +
+                          '\n')
                     self.restaurant = self.restaurant + 15 * people
                     meal_choices.append(choice)
 
@@ -186,7 +187,7 @@ meal choice (example 1):\n'))
                         continue
 
                     people = int(input('For how many people (example: 2):\n'))
-                    print('* Your choice: LUNCH for ' + str(people) + '\n')
+                    print('** Your choice: LUNCH for ' + str(people) + '\n')
                     self.restaurant = self.restaurant + 30 * people
                     meal_choices.append(choice)
 
@@ -229,11 +230,12 @@ meal choice (example 1):\n'))
 
     # Function displaying exit message confirming user's booking
     def exit_message(self):
-        print('\nThank you - your booking is now confirmed!')
-        print('NB: Should you wish to make any changes to')
-        print('your booking - please call us on 0090-1234567.')
+        print('\nThank you ' + self.firstname + ' ' + self.surname +
+              ', your booking is now confirmed!')
+        print('NB: Should you wish to make any changes to your booking,')
+        print('please call us on 0090-1234567.')
         print('Payment can be made on day of arrival.')
-        print('** We hope you enjoy your stay at the Hotel California! **\n')
+        print('** We hope you enjoy your stay at The Hotel California! **\n')
 
 
 """
