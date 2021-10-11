@@ -82,7 +82,7 @@ class Hotel_booking:
 
         return
 
-    # Function for user input of 'room type' and cost
+    # Function for user input of 'room type': user to choose one option
     def room_rent(self):
         print('\nHotel Room Types Available')
         print('--------------------------')
@@ -100,7 +100,8 @@ class Hotel_booking:
                 if (room == 1):
                     night = int(input('\nEnter Number of nights you wish to stay \
 with us (example: 2):\n'))
-                    print('** Your choice: FAMILY room for ' +
+                    # Confirmation of user's choice printed back to user
+                    print('\n** Your choice: FAMILY room for ' +
                           str(night) + ' night/s.\n')
                     # Sum of room cost (eg: '1') * number of nights (eg: '2')
                     self.room_type = 100 * night
@@ -109,7 +110,7 @@ with us (example: 2):\n'))
                 elif (room == 2):
                     night = int(input('\nEnter Number of nights you wish to stay \
 with us (example: 2):\n'))
-                    print('** Your choice: TWIN BED room for ' +
+                    print('\n** Your choice: TWIN BED room for ' +
                           str(night) + ' night/s.\n')
                     self.room_type = 80 * night
                     return True
@@ -117,7 +118,7 @@ with us (example: 2):\n'))
                 elif (room == 3):
                     night = int(input('\nEnter Number of nights you wish to stay \
 with us (example: 2):\n'))
-                    print('** Your choice: DOUBLE room for ' +
+                    print('\n** Your choice: DOUBLE room for ' +
                           str(night) + ' night/s.\n')
                     self.room_type = 70 * night
                     return True
@@ -125,7 +126,7 @@ with us (example: 2):\n'))
                 elif (room == 4):
                     night = int(input('\nEnter Number of nights you wish to stay \
 with us (example: 2):\n'))
-                    print('** Your choice: SINGLE room for ' +
+                    print('\n** Your choice: SINGLE room for ' +
                           str(night) + ' night/s.\n')
                     self.room_type = 60 * night
                     return True
@@ -157,44 +158,48 @@ with us (example: 2):\n'))
                 choice = int(input('Enter the Number of your \
 Meal Choice (example 1):\n'))
 
-                # If statements appropriate to above meal choice
+                # If/elif statements appropriate to above meal choice
                 if (choice == 1):
                     # To check meal choice not already selected
                     if choice in meal_choices:
-                        print("You've already selected Dinner!\n")
+                        print("\nYou've already selected Dinner!\n")
                         continue
 
-                    people = int(input('For how many people (example: 2):\n'))
-                    print('** Your choice: DINNER for ' + str(people) + '\n')
+                    people = int(input('\nFor how many people \
+(example: 2):\n'))
+                    # Confirmation of user's choice printed back to user
+                    print('\n** Your choice: DINNER for ' + str(people) + '\n')
                     # Sum of meal choice (eg: 1) * number of people (eg: 2)
                     self.restaurant = self.restaurant + 40 * people
                     meal_choices.append(choice)
 
                 elif (choice == 2):
                     if choice in meal_choices:
-                        print("You've already selected Breakfast!\n")
+                        print("\nYou've already selected Breakfast!\n")
                         continue
 
-                    people = int(input('For how many people (example: 2):\n'))
-                    print('** Your choice: BREAKFAST for ' + str(people) +
+                    people = int(input('\nFor how many people \
+(example: 2):\n'))
+                    print('\n** Your choice: BREAKFAST for ' + str(people) +
                           '\n')
                     self.restaurant = self.restaurant + 15 * people
                     meal_choices.append(choice)
 
                 elif (choice == 3):
                     if choice in meal_choices:
-                        print("You've already selected Lunch!\n")
+                        print("\nYou've already selected Lunch!\n")
                         continue
 
-                    people = int(input('For how many people (example: 2):\n'))
-                    print('** Your choice: LUNCH for ' + str(people) + '\n')
+                    people = int(input('\nFor how many people \
+(example: 2):\n'))
+                    print('\n** Your choice: LUNCH for ' + str(people) + '\n')
                     self.restaurant = self.restaurant + 30 * people
                     meal_choices.append(choice)
 
-                # User can bypass the restaurant option by pressing '4'
+                # User can bypass the restaurant options by pressing '4'
                 # User must press '4' after making meal choices
                 elif (choice == 4):
-                    print('Exiting the restaurant menu...')
+                    print('\nExiting the restaurant menu...')
                     return
 
                 else:
@@ -230,6 +235,7 @@ Meal Choice (example 1):\n'))
 
     # Function displaying exit message confirming user's booking
     def exit_message(self):
+        # Personalised thank you to user
         print('\nThank you ' + self.firstname + ' ' + self.surname +
               ', your booking is now confirmed!')
         print('NB: Should you wish to make any changes to your booking,')
@@ -253,6 +259,7 @@ main() function that provides 'user prompts' to call the functions:
 def main():
     a = Hotel_booking()
 
+    # Actions that will call appropriate 'functions'
     actions = ['\nPress 1 to enter your Surname\n',
                '\nPress 2 to enter your First Name\n',
                '\nPress 3 to choose your Arrival Date\n',
@@ -261,6 +268,7 @@ def main():
                '\nPress 6 to view your Final Bill\n',
                '\nPress 7 to view your Confirmation\n']
 
+    # Functions called when relevant 'action' selected
     functions = [a.input_surname, a.input_firstname,
                  a.check_in_date, a.room_rent,
                  a.meals_purchased, a.show_final_bill, a.exit_message]

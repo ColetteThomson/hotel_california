@@ -17,18 +17,21 @@ The live project can be found [here]()
 Opening message displayed in terminal.
 * Indicates purpose of programme.
 * Gives contact details should users have any queries.
+[welcome_message](assets/images/welcome_message_hotel_california.jpg)
 
 ### Customer Details section  
 User is prompted to enter their surname, then their first name.  
 * These fields are later combined to form their **Reservation**.    
 * Functionality ensures entry for these fields is alphabet letters only.
 * An error message will display should invalid data be entered.
+[customer_details](assets/images/customer_details_hotel_california.jpg)
 
 ### Check-in Date section 
 User is prompted to enter their arrival date.
 * Functionality ensures date is entered in a particular format ('dd/mm/yyyy').
 * Functionality also ensures that date entered is in the future
 * An error message will display should an invalid date be entered.
+[checkin_date](assets/images/checkin_date_hotel_california.jpg)
 
 ### Hotel Room Types Available section
 This enables the user to choose their required hotel room type.
@@ -36,6 +39,7 @@ This enables the user to choose their required hotel room type.
 * After selecting their preferred room type - the user will be prompted to enter the number of nights they wish to stay at the hotel.  
 * The user's choices are printed to the console (for example:  'Your choice: Double room for 2 nights') as way of confirmation of their entry.
 * An error message will display should invalid data be entered.
+[room_types](assets/images/room_type_hotel_california.jpg)
 
 ### Meal/s Options section
 This enables users to choose meals OR bypass the meal options.
@@ -46,6 +50,8 @@ This enables users to choose meals OR bypass the meal options.
 * Functionality is present to ensure the user does not select the same meal type more than once.  A error message will be displayed (for example: 'You've already selected Dinner!')
 * The user's choice/s are printed to the console (for example: 'Your choice: Dinner for 2') as way of confirmation of their entry.
 * An error message will display should invalid data be entered.
+[meal_options_1](assets/images/meal_choice_1_hotel_california.jpg)
+[meal_options_2](assets/images/meal_choice_2_hotel_california.jpg)
 
 * The **Hotel California Bill** section prints to the console a cost breakdown of the user's various inputs:  
     * The **Customer Reservation** is comprised of the user's firstname and surname.  
@@ -53,8 +59,10 @@ This enables users to choose meals OR bypass the meal options.
     * **Room Cost** is the sum of room type cost x number of nights.  
     * **Meal/s Cost** is the sum of meal type/s cost x number of people.  
     * The **Total Final Bill** is the sum of 'Room Cost' + 'Meal/s Cost'.
+[final_bill](assets/images/final_bill_hotel_california.jpg)
 
 * **Customer Confirmation** section:  this provides a message to confirm the user's booking.  Information on how to contact the Hotel is given, should the user wish to change their booking in any way.
+[customer_confirmation](assets/images/confirmation_hotel_california.jpg)
 
 ## Future Features
 * Future functionality to allow users to edit their own bookings if required.
