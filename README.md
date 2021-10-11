@@ -56,7 +56,8 @@ This enables users to choose meals OR bypass the meal options.
 * Terminal screenshot 1: [meal_options_1](assets/images/meal_choice_1_hotel_california.jpg)
 * Terminal screenshot 2: [meal_options_2](assets/images/meal_choice_2_hotel_california.jpg)
 
-* The **Hotel California Bill** section prints to the terminal a cost breakdown of the user's various inputs:  
+### The Hotel California Bill section 
+* Prints to the terminal a cost breakdown of the user's various inputs:  
     * The **Customer Reservation** is comprised of the user's firstname and surname.  
     * The user's chosen **Check-in Date** is displayed.  
     * **Room Cost** is the sum of room type cost x number of nights.  
@@ -64,7 +65,9 @@ This enables users to choose meals OR bypass the meal options.
     * The **Total Final Bill** is the sum of 'Room Cost' + 'Meal/s Cost'.
 * Terminal screenshot: [final_bill](assets/images/final_bill_hotel_california.jpg)
 
-* **Customer Confirmation** section:  this provides a message to confirm the user's booking.  Information on how to contact the Hotel is given, should the user wish to change their booking in any way.
+### Customer Confirmation section  
+* Prints to the terminal a message to confirm the user's booking.  
+* Information on how to contact the Hotel is given, should the user wish to change their booking in any way.
 * Terminal screenshot: [customer_confirmation](assets/images/confirmation_hotel_california.jpg)
 
 ## Future Features
