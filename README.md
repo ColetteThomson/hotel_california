@@ -78,6 +78,10 @@ Validation testing for entry of invalid input:
 * Repetition testing for same input twice (in meal options section)
 * Repeated invalid input 
 
+Test cases can be found here:
+* [TC01](../assets/images/hotel_california_testcase_tc01.jpg)
+* 
+
 ### Validator Testing
 * Python code was run through [PEP8online.com](http://pep8online.com/) with no errors returned.
 
