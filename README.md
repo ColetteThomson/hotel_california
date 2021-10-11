@@ -81,6 +81,10 @@ Validation testing for entry of invalid input:
 Test cases can be found here:
 * [TC01](assets/images/hotel_california_testcase_tc01.jpg)
 * [TC02_TC03](assets/images/hotel_california_testcase_tc02_tc03.jpg)
+* [TC04_TC05](assets/images/hotel_california_testcase_tc04_tc05.jpg)
+* [TC06](assets/images/hotel_california_testcase_tc06.jpg)
+* [TC07](assets/images/hotel_california_testcase_tc07.jpg)
+* [TC08_TC09_TC10](assets/images/hotel_california_testcase_tc08_tc09_tc10.jpg)
 
 ### Validator Testing
 * Python code was run through [PEP8online.com](http://pep8online.com/) with no errors returned.
