@@ -39,7 +39,7 @@ This enables the user to choose their required hotel room type.
 * After selecting their preferred room type - the user will be prompted to enter the number of nights they wish to stay at the hotel.  
 * The user's choices are printed to the console (for example:  'Your choice: Double room for 2 nights') as way of confirmation of their entry.
 * An error message will display should invalid data be entered.
-[room_types](assets/images/room_type_hotel_california.jpg)
+[room_types](assets/images/room_types_hotel_california.jpg)
 
 ### Meal/s Options section
 This enables users to choose meals OR bypass the meal options.
