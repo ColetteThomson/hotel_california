@@ -5,7 +5,7 @@ This command line based hotel booking system was created to enable users to book
 This booking system is designed to be run through once, with the user required to call the hotel should they wish to make any changes to their original online booking.
 Users are greeted by a welcome message, giving guidance on how the programme works, along with contact details for the Hotel. The user is prompted to enter their name, check-in date, room type and meal choices and a total bill is displayed with all the guest's details and expected costs. Finally a confirmation message is displayed with the hotel's contact details.  
 
-The live project can be found [here]()
+The live project can be found [here](https://hotel-california-booking.herokuapp.com/)
 
 A mockup of the project viewed across all screen sizes can be found [here](assets/images/mockup_hotel_california.jpg)
 
