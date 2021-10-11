@@ -88,9 +88,10 @@ Test cases can be found here:
 
 ### Validator Testing
 * Python code was run through [PEP8online.com](http://pep8online.com/) with no errors returned.
+* PEP8 online results can be found [here](assets/images/pep8_hotel_california.jpg)
 
 ### Solved Bugs
-* The function 'input_surname' occasionally doesn't accept correct input. This bug appears to have been resolved through the adding of a 'return'.  This ensures a return to the main() calling function.
+* The function 'input_surname' occasionally doesn't accept correct input. This bug appears to have been resolved through the adding of the 'return' keyword.  This ensures a return to the main() calling function.
 
 ### Unsolved Bugs
 * None found
